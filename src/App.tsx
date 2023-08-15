@@ -24,28 +24,24 @@ const App = () => {
   useEffect(() => {
     let incomeCount = 0; 
     let expenseCount = 0; 
-
+    
     for (let i in filteredList) {
       if(categories[filteredList[i].category].expense) {
         expenseCount += filteredList[i].value;
-      // eslint-disable-next-line no-lone-blocks
       } else {
         incomeCount += filteredList[i].value;
       }
     }
-
     setIncome(incomeCount); 
     setExpense(expenseCount);
   }, [filteredList])
-
-
 
   const handleMOnthChange = (newMonth: string) => {
     setCurrentMonth(newMonth)
   };
 
   const handleAddItem = (item: Item) => {
-    let newList  = [...list]; 
+    let newList  = [...list];
     newList.push(item);
     setList(newList);
   };

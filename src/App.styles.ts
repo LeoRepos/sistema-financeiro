@@ -9,6 +9,7 @@ export const Header = styled.div`
     background-color: darkblue;
     height: 150px;
     text-align: center;
+    padding-top: 2rem;
 `;
 
 export const HeaderText = styled.h1`
